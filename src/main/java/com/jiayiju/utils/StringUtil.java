@@ -11,7 +11,7 @@ public class StringUtil {
 			return "字符串不能为空";
 		}
 		// System.getProperty("line.separator")
-		String str = src.replaceAll("\n", "|");
+		String str = src.replaceAll(System.getProperty("line.separator"), "|");
 		String newStr = "";
 		String[] split = str.split("\\|");
 		for (String string : split) {
