@@ -21,7 +21,6 @@ public class DateUtil {
 	 * @return: Date
 	 */
 	public static Date getDateByMonthSub(Date date, Integer month) {
-
 		Calendar c = Calendar.getInstance();
 		// 用传入的日期,初始化日历类
 		c.setTime(date);
