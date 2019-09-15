@@ -11,6 +11,25 @@ import java.util.Date;
  * @date: 2019年9月5日 下午4:02:31
  */
 public class DateUtil {
+	/**
+	 * 
+	 * @Title: getDateByMonthSub
+	 * @Description: 用传入的日期减去对应的月份
+	 * @param date
+	 * @param month
+	 * @return
+	 * @return: Date
+	 */
+	public static Date getDateByMonthSub(Date date, Integer month) {
+
+		Calendar c = Calendar.getInstance();
+		// 用传入的日期,初始化日历类
+		c.setTime(date);
+		// 用日历类减去month
+		c.add(Calendar.MONTH, -month);
+		return c.getTime();
+	}
+
 	/*
 	 * 方法1： 给一个时间对象，返回该时间所在月的1日0时0分0秒。例如一个Date对象的值是2019-05-18 11:37:22
 	 * 则返回的结果为2019-05-01 00:00:00
@@ -57,7 +76,7 @@ public class DateUtil {
 		// 根据时间创建日历
 		c.setTime(src);
 		// 让月份加1，再变为月初，再减1秒
-		
+
 		// 月份加1
 		c.add(Calendar.MONTH, 1);
 		// 变为月初
