@@ -14,17 +14,18 @@ public class FileUtil {
 	 * 方法1：给定一个文件名，返回该文件名的扩展名，例如“aaa.jpg”，返回“.jpg”(3分)
 	 */
 	public static String getExtendName(String fileName) {
-		String str = fileName.substring(fileName.lastIndexOf("."));
-		return str;
+		if (null != fileName && fileName.length() != 0)
+			return fileName.substring(fileName.lastIndexOf("."));
+		return "不是有效的文件";
 	}
 
 	/*
-	 * 方法2：返回操作系统临时目录(5分)
+	 * 方法2：返回操作系统临时目录
 	 */
 	public static File getTempDirectory() {
+
 		String path = System.getProperty("java.io.tmpdir");
-		File file = new File(path);
-		return file;
+		return new File(path);
 	}
 
 	/*
@@ -32,8 +33,6 @@ public class FileUtil {
 	 */
 	public static File getUserDirectory() {
 		String path = System.getProperty("user.home");
-		File file = new File(path);
-		return file;
+		return new File(path);
 	}
-
 }

@@ -25,7 +25,7 @@ public class StringUtilTest {
 	@Test
 	public void testIsPhone() {
 		String str = "18360170519";
-		boolean flag = StringUtil.isPhone(str);
+		boolean flag = StringUtil.isPhoneNumber(str);
 		System.out.println("是否是一个合法的手机号：" + flag);
 	}
 
