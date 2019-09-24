@@ -8,7 +8,7 @@ import java.util.Date;
  * @ClassName: DateUtil
  * @Description: 日期工具类
  * @author:jyj
- * @date: 2019年9月5日 下午4:02:31
+ * @date: 2019年9月5日 下午4:02:32
  */
 public class DateUtil {
 
